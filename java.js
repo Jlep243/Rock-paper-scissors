@@ -1,14 +1,23 @@
 console.log("Hello");
 
+
 const choices = ["rock", "paper", "scissors"];
 
+
+
 function getComputerChoice() {
-    
-    
-    console.log(Math.floor(math.random()*3));
-    
+
+    let a = Math.floor(Math.random()*3);
+    console.log(choices[a]);
+
 }
 
 
 
-getComputerChoice();
+/*function playerSelection() {
+    let playerChoice = document.querySelector("#playerChoice");
+    console.log(playerChoice);
+
+}
+
+playerSelection();*/
