@@ -1,0 +1,22 @@
+#header
+{
+    display:flex;
+    justify-content: center;
+}
+
+#list
+{
+    display:flex;
+    justify-content: center;
+}
+
+#title
+{
+    display:flex;
+}
+
+#choices
+{
+    display:flex;
+    justify-content: center;
+}
