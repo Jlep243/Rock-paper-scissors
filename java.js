@@ -14,10 +14,10 @@ function getComputerChoice() {
 
 
 
-/*function playerSelection() {
-    let playerChoice = document.querySelector("#playerChoice");
+function playerSelection() {
+
+    let playerChoice = document.querySelector("#weapon");
     console.log(playerChoice);
 
 }
 
-playerSelection();*/
