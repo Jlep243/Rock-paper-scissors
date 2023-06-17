@@ -5,27 +5,29 @@ function computer() {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
-let playerSelection="rock";
+//let playerSelection="rock";
 let computerChoice = computer();
 
 
-function playRound(playerSelection, computerChoice){
+function playRound(playerSelection, computerChoice){   
     
     //winning conditions
-    if ((playerSelection == "rock" && computerChoice == "scissors")|| (playerSelection == "paper" && computerChoice == "rock")
-    || (playerSelection == "scissors" && computerChoice == "paper")){
-        console.log("player:" + playerSelection, " Computer:" + computerChoice);
+    if ((playerSelection.toLowerCase() == "rock" && computerChoice == "scissors")|| (playerSelection.toLowerCase() == "paper" && computerChoice == "rock")
+    || (playerSelection.toLowerCase() == "scissors" && computerChoice == "paper")){
+        alert("player:" + playerSelection.toLowerCase() + " Computer:" + computerChoice);
         alert("you WIN!!!!");
     }
-    else if(playerSelection =="paper" && computerChoice == "scissors"|| playerSelection == "rock" && computerChoice == "paper"||
-    playerSelection == "scissors" && computerChoice == "rock") {
+    else if(playerSelection.toLowerCase() =="paper" && computerChoice == "scissors"|| playerSelection.toLowerCase() == "rock" && computerChoice == "paper"||
+    playerSelection.toLowerCase() == "scissors" && computerChoice == "rock") {
+        alert("player:" + playerSelection.toLowerCase() + " Computer:" + computerChoice);
         alert("you LOSE!!!");
-        console.log("player:" + playerSelection, " Computer:" + computerChoice);
     }
-    else if(playerSelection == computerChoice){
-        alert("you tied!!");
-        console.log("player:" + playerSelection, " Computer:" + computerChoice);
+    else if(playerSelection.toLowerCase() == computerChoice){
+        alert("player:" + playerSelection.toLowerCase() + " Computer:" + computerChoice);
+        alert("you tied!!"); 
     }
 }
 
+let playerSelection = window.prompt("CHOOSE YOUR WEAPON!!!");
 playRound(playerSelection, computerChoice);
+
