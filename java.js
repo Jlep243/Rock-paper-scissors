@@ -1,8 +1,4 @@
 
-
-
-
-
 function game(){
     function computer() {
         let choices = ["rock", "paper", "scissors"];
@@ -13,7 +9,7 @@ function game(){
       let computerScore = 0;
       let computerChoice;
       let playerSelection;
-
+      let round = 0;
 function playRound(playerSelection, computerChoice){   
     
     
@@ -38,20 +34,28 @@ function playRound(playerSelection, computerChoice){
     else if(playerSelection.toLowerCase() == computerChoice){
         alert("player:" + playerSelection.toLowerCase() + " Computer:" + computerChoice);
         alert("you tied!!"); 
+        playRound(playerSelection, computerChoice);
+    }    
+       
+}   
+
+function declareWinner(){
+    if (playerScore > computerScore)
+    {
+        alert("You won! " +"Player: " + playerScore + "computer: " + computerScore);
     }
-    
-   
-
-         
-    
+    else if (computerScore > playerScore)
+    {
+        alert("You lost! " +" Player: " + playerScore + " computer: " + computerScore);
+    }
 }
-playRound(playerSelection, computerChoice);
-playRound(playerSelection, computerChoice);
-playRound(playerSelection, computerChoice);
-playRound(playerSelection, computerChoice);
-playRound(playerSelection, computerChoice);
 
-
+playRound(playerSelection, computerChoice);
+playRound(playerSelection, computerChoice);
+playRound(playerSelection, computerChoice);
+playRound(playerSelection, computerChoice);
+playRound(playerSelection, computerChoice);
+declareWinner();
 }
 
 
