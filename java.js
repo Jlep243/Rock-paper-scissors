@@ -1,15 +1,31 @@
 
-function game(){
-    function computer() {
+function game() 
+{
+   
+
+    function computer() 
+    {
         let choices = ["rock", "paper", "scissors"];
         return choices[Math.floor(Math.random() * choices.length)];
-      }
+    };
     
       let playerScore = 0;
       let computerScore = 0;
       let computerChoice;
       let playerSelection;
-      let round = 0;
+
+      function playGame()
+      {
+        let rounds = 0;
+          do
+          {
+              playRound(playerSelection, computerChoice);
+              rounds++; 
+          }
+          while( rounds < 5);
+          declareWinner();
+      };      
+
 function playRound(playerSelection, computerChoice){   
     
     
@@ -37,9 +53,10 @@ function playRound(playerSelection, computerChoice){
         playRound(playerSelection, computerChoice);
     }    
        
-}   
+};   
 
-function declareWinner(){
+function declareWinner()
+{
     if (playerScore > computerScore)
     {
         alert("You won! " +"Player: " + playerScore + "computer: " + computerScore);
@@ -48,20 +65,9 @@ function declareWinner(){
     {
         alert("You lost! " +" Player: " + playerScore + " computer: " + computerScore);
     }
-}
+};
 
-playRound(playerSelection, computerChoice);
-playRound(playerSelection, computerChoice);
-playRound(playerSelection, computerChoice);
-playRound(playerSelection, computerChoice);
-playRound(playerSelection, computerChoice);
-declareWinner();
-}
-
-
-
-
-
-
+playGame(); 
+};
 
 game()
