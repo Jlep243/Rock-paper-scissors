@@ -1,20 +1,17 @@
 
-function game() 
-{
-   
-
     function computer() 
     {
         let choices = ["rock", "paper", "scissors"];
         return choices[Math.floor(Math.random() * choices.length)];
     };
     
-      let playerScore = 0;
-      let computerScore = 0;
-      let computerChoice;
-      let playerSelection;
+      //let playerScore = 0;
+      //let computerScore = 0;
+      //let computerChoice;
 
-      function playGame()
+      let rock = document.querySelector("#options .button .rock");
+    let playerSelection = rock;
+      /*function playGame()
       {
         let rounds = 0;
           do
@@ -24,18 +21,19 @@ function game()
           }
           while( rounds < 5);
           declareWinner();
-      };      
+      };*/ 
 
 function playRound(playerSelection, computerChoice){   
     
+    alert("hello!");
     
     computerChoice = computer();
-    playerSelection = window.prompt("CHOOSE YOUR WEAPON!!!");
     
-    //winning conditions
-    if ((playerSelection.toLowerCase() == "rock" && computerChoice == "scissors")|| (playerSelection.toLowerCase() == "paper" && computerChoice == "rock")
-    || (playerSelection.toLowerCase() == "scissors" && computerChoice == "paper")){
-        alert("player:" + playerSelection.toLowerCase() + " Computer:" + computerChoice);
+    
+    
+    if ((playerSelection == rock && computerChoice == "scissors")|| (playerSelection == "paper" && computerChoice == "rock")
+    || (playerSelection == "scissors" && computerChoice == "paper")){
+        alert("player:" + playerSelection + " Computer:" + computerChoice);
         playerScore += 1;
         alert("player : " + playerScore + "computer: " + computerScore);
     }
@@ -51,8 +49,8 @@ function playRound(playerSelection, computerChoice){
         alert("player:" + playerSelection.toLowerCase() + " Computer:" + computerChoice);
         alert("you tied!!"); 
         playRound(playerSelection, computerChoice);
-    }    
-       
+    };
+
 };   
 
 function declareWinner()
@@ -67,7 +65,6 @@ function declareWinner()
     }
 };
 
-playGame(); 
-};
+//playGame();
 
-game()
+
