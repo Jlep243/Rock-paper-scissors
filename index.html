@@ -5,17 +5,19 @@
         <link rel = "stylesheet" href="style.css">
     </head>
 <body>
-    <script src="java.js"></script>
+    
 
 
     
     <h1 id ="header">rOcK PaPeR sCisSoRs!</h1>
 
     <!--- I have not figured out how to work this quite yet-->
-<div id="options">
-    <input type="text" id="weapon" name="weapon" required minlength="4" maxlength="10" size="10">
-    <button onclick="playerSelection()">submit</button>
+<div id = "options">
+    <button onclick = "playRound()" class = "rock">ROCK</button>
+    <button onclick = "playRound()">PAPER</button>
+    <button onclick = "playRound()">SCISSORS</button>
 </div>
 
+<script src="java.js"></script>
 </body>
 </html>
