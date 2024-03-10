@@ -5,33 +5,34 @@
         return choices[Math.floor(Math.random() * choices.length)];
     };
     
-      //let playerScore = 0;
-      //let computerScore = 0;
-      //let computerChoice;
+    let playerScore = 0;
+    let computerScore = 0;
+    let computerChoice = computer();
+    let playerSelection;
+    
 
-      let rock = document.querySelector("#options .button .rock");
-    let playerSelection = rock;
-      /*function playGame()
-      {
-        let rounds = 0;
-          do
-          {
-              playRound(playerSelection, computerChoice);
-              rounds++; 
-          }
-          while( rounds < 5);
-          declareWinner();
-      };*/ 
+      document.querySelector(" #options .rock").onclick = function() 
+    {
+        playerSelection = "rock";
+        alert(playerSelection);
+    };
+
+    document.querySelector("#options .paper").onclick = function() 
+    {
+        playerSelection = "paper";
+        playRound();
+    };
+
+    document.querySelector("#options .scissors").onclick = function() 
+    {
+        playerSelection = "scissors"
+        alert(playerSelection);
+    };
+    
 
 function playRound(playerSelection, computerChoice){   
-    
-    alert("hello!");
-    
-    computerChoice = computer();
-    
-    
-    
-    if ((playerSelection == rock && computerChoice == "scissors")|| (playerSelection == "paper" && computerChoice == "rock")
+    //winning conditions
+    if ((playerSelection == "rock" && computerChoice == "scissors")|| (playerSelection == "paper" && computerChoice == "rock")
     || (playerSelection == "scissors" && computerChoice == "paper")){
         alert("player:" + playerSelection + " Computer:" + computerChoice);
         playerScore += 1;
@@ -51,7 +52,7 @@ function playRound(playerSelection, computerChoice){
         playRound(playerSelection, computerChoice);
     };
 
-};   
+};
 
 function declareWinner()
 {
@@ -65,6 +66,6 @@ function declareWinner()
     }
 };
 
-//playGame();
+
 
 
