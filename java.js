@@ -35,10 +35,16 @@
         
     };
 
-    let playerScore = 0;
-    let computerScore = 0;
     let computerChoice = computer();
     console.log("computer: " + computerChoice);
+
+    //ScoreBoard
+    let playerScore = document.createElement('h3');
+    let computerScore = document.createElement('h3');
+    let table = document.querySelector("#score");
+    
+
+    
 
      
 
@@ -46,24 +52,31 @@
         //winning conditions
         if ((playerSelection == "rock" && computerChoice == "scissors")|| (playerSelection == "paper" && computerChoice == "rock")
         || (playerSelection == "scissors" && computerChoice == "paper")){
-            alert("player:" + playerSelection + " Computer:" + computerChoice);
+            alert("player: " + playerSelection + " Computer: " + computerChoice);
             playerScore += 1;
-            alert("player : " + playerScore + "computer: " + computerScore);
+            alert("player : " + playerScore + " " + "computer: " + computerScore);
         }
         //losing conditions
         else if(playerSelection =="paper" && computerChoice == "scissors"|| playerSelection == "rock" && computerChoice == "paper"||
         playerSelection == "scissors" && computerChoice == "rock") {
-            alert("player:" + playerSelection + " Computer:" + computerChoice);
+            alert("player: " + playerSelection + " Computer: " + computerChoice);
             computerScore += 1;
-            alert("player : " + playerScore + "computer: " + computerScore);
+            alert("player : " + playerScore + " " + "computer: " + computerScore);
         }
         //tie
         else if(playerSelection == computerChoice){
-            alert("player:" + playerSelection + " Computer:" + computerChoice);
+            alert("player: " + playerSelection + " Computer: " + computerChoice);
             alert("you tied!!"); 
         };
+
+        
+        
+
+
     
     };
+
+
 
     /*declareWinner();
 
