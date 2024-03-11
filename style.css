@@ -7,6 +7,8 @@ body{
     display:flex;
     justify-content: center;
     color:white;
+    text-decoration-line:underline;
+    text-decoration-thickness:5px ;
 }
 
 #list
