@@ -1,7 +1,4 @@
     
-    
-    
-
     function computer() 
     {
         let choices = ["rock", "paper", "scissors"];
@@ -39,10 +36,30 @@
     console.log("computer: " + computerChoice);
 
     //ScoreBoard
+    let scoreBoard = document.querySelector("#score");
+    let table = document.createElement('tr');
+    scoreBoard.appendChild(table);
+
+        table.classList.add('table');
+
+    //player score
     let playerScore = document.createElement('h3');
+    playerScore.classList.add('playerScore');
+    playerScore.textContent = 0;
+
+    //computer score
     let computerScore = document.createElement('h3');
-    let table = document.querySelector("#score");
+    computerScore.textContent = 0;
+    computerScore.classList.add('computerScore');
+
+
+    table.appendChild(playerScore);
+    table.appendChild(computerScore);
+
+
     
+
+    //table.appendChild(playerScore,computerScore);;
 
     
 
