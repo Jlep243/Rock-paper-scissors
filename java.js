@@ -35,32 +35,34 @@
     let computerChoice = computer();
     console.log("computer: " + computerChoice);
 
-    //ScoreBoard
-    let scoreBoard = document.querySelector("#score");
-    let table = document.createElement('tr');
-    scoreBoard.appendChild(table);
+    //ScoreBoard   
+    let scoreBoard = document.getElementById("score");
+    let points = document.createElement('h2');
 
-        table.classList.add('table');
+    points.textContent = "Score";
+
+    scoreBoard.appendChild(points);
+
+
 
     //player score
+    let box1 = document.createElement('div');
+    box1.classList = "playerPoints";
+    scoreBoard.appendChild(box1);
+
     let playerScore = document.createElement('h3');
-    playerScore.classList.add('playerScore');
-    playerScore.textContent = 0;
+    let playerPoints = playerScore.textContent = 0;
+    playerScore.appendChild(box1);
 
     //computer score
-    let computerScore = document.createElement('h3');
-    computerScore.textContent = 0;
-    computerScore.classList.add('computerScore');
-
-
-    table.appendChild(playerScore);
-    table.appendChild(computerScore);
-
-
+    let box2 = document.createElement('div');
+    box2.classList = "computerPoints";
+    scoreBoard.appendChild(box2);
     
-
-    //table.appendChild(playerScore,computerScore);;
-
+    let computerScore = document.createElement('h3');
+    let computerPoints = computerScore.textContent = 0;
+    
+    
     
 
      
@@ -85,11 +87,6 @@
             alert("player: " + playerSelection + " Computer: " + computerChoice);
             alert("you tied!!"); 
         };
-
-        
-        
-
-
     
     };
 
