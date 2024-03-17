@@ -11,19 +11,44 @@ body
     text-decoration-line:underline;
     text-decoration-thickness:5px ;
 }
+.row{
+    display: flex;
+   justify-content: center;
+}
 
 #score{
     display:flex;
     justify-content: center;
-}
-
-#title
-{
-    display:flex;
+    font-size:30px;
+    text-align: center;
+    color:white;
+    background-color: aqua;
+    margin-top:20px;
 }
 
 #options 
 {
     display:flex;
     justify-content: center;
+}
+
+.rock
+{
+    background-color:grey;
+    width:200px;
+    height: 200px;
+}
+
+.paper
+{
+    background-color:white;
+    width:200px;
+    height: 200px;
+}
+
+.scissors
+{
+    background-color: rgb(80, 187, 233);
+    width:200px;
+    height: 200px;
 }
