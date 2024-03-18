@@ -36,32 +36,19 @@
     console.log("computer: " + computerChoice);
 
     //ScoreBoard   
-    let scoreBoard = document.getElementById("score");
-    let points = document.createElement('h2');
+    let scoreBoard = document.getElementById("score"); //creates variable from div element
+    let scoreHeader = document.createElement('h2'); //heading for score
+    scoreHeader.textContent = "Score"; 
+    title.appendChild(scoreHeader);
 
-    points.textContent = "Score";
-
-    scoreBoard.appendChild(points);
-
-
-
-    //player score
-    let box1 = document.createElement('div');
-    box1.classList = "playerPoints";
-    scoreBoard.appendChild(box1);
-
+    //point
     let playerScore = document.createElement('h3');
-    let playerPoints = playerScore.textContent = 0;
-    playerScore.appendChild(box1);
-
-    //computer score
-    let box2 = document.createElement('div');
-    box2.classList = "computerPoints";
-    scoreBoard.appendChild(box2);
+    playerScore.textContent = "0";
+    box1.appendChild(playerScore);
     
     let computerScore = document.createElement('h3');
-    let computerPoints = computerScore.textContent = 0;
-    
+    computerScore.textContent = "0";
+    box2.appendChild(computerScore); 
     
     
 
