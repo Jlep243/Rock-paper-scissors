@@ -8,8 +8,9 @@
     document.querySelector(" #options .rock").onclick = function() 
     {
         const playerSelection = "rock";
-        console.log("player " + playerSelection);
+        console.log("player: " + playerSelection);
         const computerChoice = computer();
+        console.log("computer: " + computerChoice);
         playRound(playerSelection, computerChoice);
         
     };
@@ -17,8 +18,9 @@
     document.querySelector("#options .paper").onclick = function() 
     {
         const playerSelection = "paper";
-        console.log("player " + playerSelection);
+        console.log("player: " + playerSelection);
         const computerChoice = computer();
+        console.log("computer: " + computerChoice);
         playRound(playerSelection, computerChoice);
        
     };
@@ -26,8 +28,9 @@
     document.querySelector("#options .scissors").onclick = function() 
     {
         const playerSelection = "scissors";
-        console.log("player " + playerSelection);
+        console.log("player: " + playerSelection);
         const computerChoice = computer();
+        console.log("computer: " + computerChoice);
         playRound(playerSelection, computerChoice);
         
     };
@@ -42,13 +45,16 @@
     title.appendChild(scoreHeader);
 
     //point
-    let playerScore = document.createElement('h3');
-    playerScore.textContent = "0";
-    box1.appendChild(playerScore);
+    let pScore = document.createElement('h3');
+    let playerScore = 0;
+    pScore.textContent = "player: " + playerScore.toString();
+    box1.appendChild(pScore);
     
-    let computerScore = document.createElement('h3');
-    computerScore.textContent = "0";
-    box2.appendChild(computerScore); 
+    let cScore = document.createElement('h3');
+    let computerScore = 0;
+    cScore.textContent = "computer: " + computerScore.toString();
+    box2.appendChild(cScore); 
+    
     
     
 
@@ -58,16 +64,14 @@
         //winning conditions
         if ((playerSelection == "rock" && computerChoice == "scissors")|| (playerSelection == "paper" && computerChoice == "rock")
         || (playerSelection == "scissors" && computerChoice == "paper")){
-            alert("player: " + playerSelection + " Computer: " + computerChoice);
             playerScore += 1;
-            alert("player : " + playerScore + " " + "computer: " + computerScore);
+            pScore.textContent = "player: " + playerScore.toString();
         }
         //losing conditions
         else if(playerSelection =="paper" && computerChoice == "scissors"|| playerSelection == "rock" && computerChoice == "paper"||
         playerSelection == "scissors" && computerChoice == "rock") {
-            alert("player: " + playerSelection + " Computer: " + computerChoice);
             computerScore += 1;
-            alert("player : " + playerScore + " " + "computer: " + computerScore);
+            cScore.textContent = "computer: " + computerScore.toString();
         }
         //tie
         else if(playerSelection == computerChoice){
