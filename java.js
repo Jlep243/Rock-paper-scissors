@@ -1,4 +1,17 @@
+    let startButton = document.createElement('div');
+    document.body.appendChild(startButton);
+    startButton.classList.add("startButton");
+
+    let button = document.createElement('button');
+    button.classList.add('start');
+    button.textContent = "start";
+    startButton.appendChild(button);
+
+    document.querySelector('.start').onclick = game();
     
+
+
+    function game () { 
     function computer() 
     {
         let choices = ["rock", "paper", "scissors"];
@@ -12,7 +25,6 @@
         const computerChoice = computer();
         console.log("computer: " + computerChoice);
         playRound(playerSelection, computerChoice);
-        
     };
 
     document.querySelector("#options .paper").onclick = function() 
@@ -22,7 +34,6 @@
         const computerChoice = computer();
         console.log("computer: " + computerChoice);
         playRound(playerSelection, computerChoice);
-       
     };
 
     document.querySelector("#options .scissors").onclick = function() 
@@ -32,7 +43,6 @@
         const computerChoice = computer();
         console.log("computer: " + computerChoice);
         playRound(playerSelection, computerChoice);
-        
     };
 
     let computerChoice = computer();
@@ -75,28 +85,30 @@
         }
         //tie
         else if(playerSelection == computerChoice){
-            alert("player: " + playerSelection + " Computer: " + computerChoice);
-            alert("you tied!!"); 
+            
         };
     
     };
 
 
 
-    /*declareWinner();
+    
 
     function declareWinner()
     {
-        if (playerScore > computerScore)
+        if (playerScore == 5 )
         {
-        alert("You won! " +"Player: " + playerScore + "computer: " + computerScore);
+        playerScore = 0;
+        computerScore = 0;
         }
-        else if (computerScore > playerScore)
+        else if (computerScore == 5)
         {
-        alert("You lost! " +" Player: " + playerScore + " computer: " + computerScore);
+            computerScore = 0;
+            playerScore = 0;
         }
-    };*/
+    };
 
+};
 
 
 
