@@ -16,6 +16,20 @@ body
    justify-content: center;
 }
 
+.startButton
+{   
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    align-items: center;
+}
+.start 
+{
+    height: 100px;
+    width:300px;
+    font-size: 90px;
+}
 #score{
     justify-content: center;
     font-size:30px;
