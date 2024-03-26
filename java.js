@@ -9,8 +9,6 @@
 
     document.querySelector('.start').onclick = game();
     
-
-
     function game () { 
     function computer() 
     {
@@ -76,12 +74,14 @@
         || (playerSelection == "scissors" && computerChoice == "paper")){
             playerScore += 1;
             pScore.textContent = "player: " + playerScore.toString();
+            declareWinner();
         }
         //losing conditions
         else if(playerSelection =="paper" && computerChoice == "scissors"|| playerSelection == "rock" && computerChoice == "paper"||
         playerSelection == "scissors" && computerChoice == "rock") {
             computerScore += 1;
             cScore.textContent = "computer: " + computerScore.toString();
+            declareWinner();
         }
         //tie
         else if(playerSelection == computerChoice){
@@ -96,15 +96,19 @@
 
     function declareWinner()
     {
-        if (playerScore == 5 )
+        if (playerScore >= 5 && playerScore > computerScore)
         {
         playerScore = 0;
+        pScore.textContent = "player: " + playerScore.toString();
         computerScore = 0;
+        cScore.textContent = "computer: " + computerScore.toString();
         }
-        else if (computerScore == 5)
+        else if (computerScore >= 5 && computerScore > playerScore)
         {
-            computerScore = 0;
             playerScore = 0;
+            pScore.textContent = "player: " + playerScore.toString();
+            computerScore = 0;
+            cScore.textContent = "computer: " + computerScore.toString();
         }
     };
 
