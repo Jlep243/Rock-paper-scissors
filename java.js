@@ -1,3 +1,10 @@
+function democracy() {
+    let box3 = document.createElement('div');
+    
+};
+
+window.onload = boogie();
+
 
     game();
     
@@ -54,9 +61,6 @@
     let computerScore = 0;
     cScore.textContent = "computer: " + computerScore.toString();
     box2.appendChild(cScore); 
-    
-    
-    
 
      
 
@@ -81,9 +85,6 @@
         };
     
     };
-
-
-
     
 
     function declareWinner()
