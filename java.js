@@ -1,6 +1,5 @@
 
-
-    document.querySelector('.start').onclick = game();
+    game();
     
     function game () { 
     function computer() 
