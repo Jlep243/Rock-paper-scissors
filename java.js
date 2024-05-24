@@ -1,11 +1,4 @@
-    let startButton = document.createElement('div');
-    document.body.appendChild(startButton);
-    startButton.classList.add("startButton");
 
-    let button = document.createElement('button');
-    button.classList.add('start');
-    button.textContent = "start";
-    startButton.appendChild(button);
 
     document.querySelector('.start').onclick = game();
     
