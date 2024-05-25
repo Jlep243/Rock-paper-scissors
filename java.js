@@ -3,10 +3,7 @@ function democracy() {
     
 };
 
-window.onload = boogie();
-
-
-    game();
+window.onload = democracy();
     
     function game () { 
     function computer() 
