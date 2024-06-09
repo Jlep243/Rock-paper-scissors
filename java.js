@@ -1,6 +1,10 @@
+
+
 function democracy() {
+    let body = document.createElement("BODY");
     let box3 = document.createElement('div');
-    
+    box3.classList.add("modal");
+    box3.appendChild("body")
 };
 
 window.onload = democracy();

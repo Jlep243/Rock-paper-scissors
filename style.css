@@ -65,3 +65,10 @@ body
     width:200px;
     height: 200px;
 }
+
+.modal
+{
+    background-color: black;
+    position:fixed;
+    
+}
