@@ -11,7 +11,8 @@ body
     text-decoration-line:underline;
     text-decoration-thickness:5px ;
 }
-.row{
+.row
+{
     display: flex;
    justify-content: center;
 }
@@ -68,7 +69,57 @@ body
 
 .modal
 {
-    background-color: black;
+    display:flex;
     position:fixed;
-    
+    background-color: rgb(17, 24, 39, 39);
+    height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+    overflow:auto;
+    z-index:1000;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+
+.content
+{
+    display:flex;
+    justify-content: center;
+    width:100%;
+}
+
+.video
+{
+    width:90%;
+}
+
+.exit
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:10px;
+    right:10px;
+    height: 50px;
+    width:50px;
+    background-color: rgb(20,36,60);
+    color:rgb(255,255,255);
+    display:flex;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index:10;
+}
+
+.exit:hover
+{
+    background-color:rgba(20,36,60,0.26);
+    color:rgba(255,255,255,0.6);
+}
+
+.x
+{
+    font-size:30px;
 }

@@ -1,13 +1,76 @@
+let body = document.body;
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    let main = document.createElement('div');
+    main.classList.add('main');
+    body.appendChild(main);
+
+    function democracy() {
+        let modal = document.createElement('div');
+        modal.classList.add('modal');
+        body.appendChild(modal);
+
+        let content = document.createElement('div');
+        content.classList.add('content');
+        modal.appendChild(content);
+        
+        let video = document.createElement('video');
+        video.classList.add('video');
+        content.appendChild(video);
+        video.src = "Helldiver.mp4";
+
+        video.type = "video/mp4";
+        video.controls = 'true';
+        
+        let exit = document.createElement('div');
+        exit.classList.add('exit');
+        modal.appendChild(exit);
+
+        let x = document.createElement('span');
+        x.classList.add('x');
+        exit.appendChild(x);
+        x.textContent = 'x';
+
+        exit.addEventListener('click', function(){
+            modal.style.display = "none";
+            let audio = document.createElement('audio');
+            body.appendChild(audio);
+            let source = document.createElement('source');
+            audio.appendChild(source);
+            source.src = "hellDiversMain.mp3";
+            source.type = "audio/mpeg";
+            video.pause();
+
+            audio.play().then(() => {
+                console.log('sound of democracy plays');
+            }).catch(error => {
+                console.log('whoops');
+            });
+        });
+
+        video.addEventListener("ended", function(){
+            modal.style.display = "none";
+            let audio = document.createElement('audio');
+            body.appendChild(audio);
+            let source = document.createElement('source');
+            audio.appendChild(source);
+            source.src = "hellDiversMain.mp3";
+            source.type = "audio/mpeg";
+            audio.play().then(() => {
+                console.log('The sound of democracy plays');
+            }).catch(error => {
+                console.log('whoops');
+            });
+        });
+
+    };
+    
+    democracy();
+
+});
 
 
-function democracy() {
-    let body = document.createElement("BODY");
-    let box3 = document.createElement('div');
-    box3.classList.add("modal");
-    box3.appendChild("body")
-};
-
-window.onload = democracy();
     
     function game () { 
     function computer() 
