@@ -40,9 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
             audio.appendChild(source);
             source.src = "hellDiversMain.mp3";
             source.type = "audio/mpeg";
+            audio.volume = 0.1;
             video.pause();
-
+            
             audio.play().then(() => {
+                
                 console.log('sound of democracy plays');
             }).catch(error => {
                 console.log('whoops');
