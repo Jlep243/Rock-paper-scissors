@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
             video.pause();
             
             audio.play().then(() => {
-                
                 console.log('sound of democracy plays');
+                game();
             }).catch(error => {
                 console.log('whoops');
             });
@@ -59,8 +59,10 @@ document.addEventListener('DOMContentLoaded', function () {
             audio.appendChild(source);
             source.src = "hellDiversMain.mp3";
             source.type = "audio/mpeg";
+            audio.volume = 0.1;
             audio.play().then(() => {
                 console.log('The sound of democracy plays');
+                game();
             }).catch(error => {
                 console.log('whoops');
             });
@@ -72,16 +74,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-
-    
     function game () { 
-    function computer() 
+
+    function changeImg()
+{
+    /* Fix it to where the imgSrc to where it can get the image to change. Either a document.createElement or expand on the querySelector*/
+    //let imgSrc = document.querySelector(terminids()).src;
+
+    function terminids() 
     {
-        let choices = ["rock", "paper", "scissors"];
-        return choices[Math.floor(Math.random() * choices.length)];
+
+        let bugTypes = ["Terminids/Bile_Titan_II.webp", "Terminids/Scavenger.png", "Terminids/Charger.png"];
+        let chosenType = bugTypes[Math.floor(Math.random() * bugTypes.length)];
+        return chosenType;
     };
+    console.log(terminids());
     
-    document.querySelector(" #options .rock").onclick = function() 
+}
+
+changeImg();
+};
+
+game();
+
+/* document.querySelector(" #options .rock").onclick = function() 
     {
         const playerSelection = "rock";
         console.log("player: " + playerSelection);
@@ -110,25 +126,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let computerChoice = computer();
     console.log("computer: " + computerChoice);
-
-    //ScoreBoard   
-    let scoreBoard = document.getElementById("score"); //creates variable from div element
-    let scoreHeader = document.createElement('h2'); //heading for score
-    scoreHeader.textContent = "Score"; 
-    title.appendChild(scoreHeader);
-
-    //point
-    let pScore = document.createElement('h3');
-    let playerScore = 0;
-    pScore.textContent = "player: " + playerScore.toString();
-    box1.appendChild(pScore);
-    
-    let cScore = document.createElement('h3');
-    let computerScore = 0;
-    cScore.textContent = "computer: " + computerScore.toString();
-    box2.appendChild(cScore); 
-
-     
 
     function playRound(playerSelection, computerChoice){   
         //winning conditions
@@ -169,9 +166,8 @@ document.addEventListener('DOMContentLoaded', function () {
             computerScore = 0;
             cScore.textContent = "computer: " + computerScore.toString();
         }
-    };
+    };*/
 
-};
 
 
 
